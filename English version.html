@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Alex | Professional Pickleball Instruction & Tactical Coaching</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --primary: #84cc16; /* Vibrant Sport Lime */
+            --primary-hover: #a3e635;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        .profile-title {
+            display: inline-block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: var(--text-sub);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(132, 204, 22, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Section Cards */
+        section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .info-box h3 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+            color: var(--text-main);
+        }
+
+        .info-box p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--text-sub);
+        }
+
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Feature Tags */
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #334155;
+            color: var(--text-main);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #0f172a;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            margin: 8px;
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--border-color);
+            color: var(--text-main);
+        }
+
+        .contact-list {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .contact-item {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+        }
+
+        .contact-item span {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 0.85rem;
+            margin-top: 40px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <header>
+        <span class="profile-title">Pickleball Coach Profile</span>
+        <h1>Coach Alex (阿吉教練)</h1>
+        <p class="subtitle">Beginner & Novice Pickleball Instruction · Advanced Tactical Coaching</p>
+        <div class="location-badge">
+            📍 Primary Locations: Beitun & North Districts, Taichung City (Partner courts available upon reservation)
+        </div>
+    </header>
+
+    <!-- Background & Experience -->
+    <section>
+        <h2>🎾 About Coach Alex</h2>
+        <p style="color: var(--text-sub); margin-bottom: 16px;">
+            With a solid foundation of over <strong>15 years in tennis</strong>, Alex brings over 3 years of competitive pickleball experience and 1+ year of professional instruction. Combining tennis-derived power generation and volley mechanics, coaching focuses on establishing sound fundamentals, efficient technique correction, and practical match tactics.
+        </p>
+        <div class="grid-2">
+            <div class="info-box">
+                <h3>15+ Years Tennis Experience</h3>
+                <p>Exceptional ball feel, footwork fundamentals, and spatial tactical awareness.</p>
+            </div>
+            <div class="info-box">
+                <h3>3+ Years Pickleball Experience</h3>
+                <p>In-depth understanding of pickleball rules, kitchen/net tactics, and match execution.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Achievements -->
+    <section>
+        <h2>🏆 Certifications & Tournament Results</h2>
+        <div class="grid-2">
+            <div>
+                <h3 style="margin-bottom: 12px; color: var(--text-main);">Official Certifications</h3>
+                <ul>
+                    <li>Chinese Taipei Pickleball Association (CTPA) Class C Coach (2026)</li>
+                    <li>Chinese Taipei Pickleball Association (CTPA) Class C Referee (2025)</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 12px; color: var(--text-main);">Tournament Achievements</h3>
+                <ul>
+                    <li>2026 Miaoli County Magistrate's Cup – Team Event 3.0 (3rd Place)</li>
+                    <li>2025 Taiwan Cup – Men's Doubles 3.0 (3rd Place)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Philosophy & Target Audience -->
+    <section>
+        <h2>💡 Coaching Highlights & Target Audience</h2>
+        <div style="margin-bottom: 20px;">
+            <h3 style="margin-bottom: 10px; font-size: 1rem;">Core Coaching Highlights</h3>
+            <div class="tag-group">
+                <span class="tag">🚀 Fast Track for Beginners</span>
+                <span class="tag">📊 Match Strategy & Tactics</span>
+                <span class="tag">⚙️ Stroke & Technique Correction</span>
+                <span class="tag">🧠 Competitive Mindset Coaching</span>
+            </div>
+        </div>
+        <div>
+            <h3 style="margin-bottom: 10px; font-size: 1rem;">Target Audience</h3>
+            <div class="tag-group">
+                <span class="tag">First-time Beginners</span>
+                <span class="tag">Intermediate Players</span>
+                <span class="tag">Kids / Youth</span>
+                <span class="tag">Seniors / Active Adults</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson Programs -->
+    <section>
+        <h2>🏸 Lesson Programs</h2>
+        <p style="color: var(--text-sub); margin-bottom: 16px;">Tailored training programs to meet your goals (Pricing available upon inquiry):</p>
+        <div class="grid-2">
+            <div class="info-box">
+                <h3>1-on-1 Private Instruction</h3>
+                <p>Personalized stroke refinement, addressing blind spots, and technical discipline.</p>
+            </div>
+            <div class="info-box">
+                <h3>2-Person Doubles Partner Class</h3>
+                <p>Focuses on chemistry, positioning, doubles tactics, and live-ball scenarios.</p>
+            </div>
+            <div class="info-box">
+                <h3>Group / Corporate Clinics</h3>
+                <p>Fun and interactive sessions suitable for friends, families, or workplace clubs.</p>
+            </div>
+            <div class="info-box">
+                <h3>Trial / Introductory Session</h3>
+                <p>Designed for absolute beginners to quickly learn rules, scoring, and basic shots in one session.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+        <h2>📩 Book a Lesson / Inquiry</h2>
+        <p style="color: var(--text-sub); margin-bottom: 20px;">Whether you're picking up a paddle for the first time or looking to break through a competitive plateau, feel free to reach out!</p>
+        
+        <div class="contact-list">
+            <div class="contact-item">Line ID: <span>abelian1982</span></div>
+            <div class="contact-item">Phone: <span>0918-839-126</span></div>
+            <div class="contact-item">Email: <span>abelian1982@gmail.com</span></div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <a href="https://line.me/ti/p/~abelian1982" target="_blank" class="btn">Connect on Line</a>
+            <a href="mailto:abelian1982@gmail.com" class="btn btn-outline">Send Email</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Coach Alex Pickleball Coaching. All Rights Reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>
