@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿吉教練 Alex | 專業匹克球教學與技術指導</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --primary: #84cc16; /* 陽光活力綠 */
+            --primary-hover: #a3e635;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        .profile-title {
+            display: inline-block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: var(--text-sub);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(132, 204, 22, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Section Cards */
+        section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .info-box h3 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+            color: var(--text-main);
+        }
+
+        .info-box p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--text-sub);
+        }
+
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Feature Tags */
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #334155;
+            color: var(--text-main);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #0f172a;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            margin: 8px;
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--border-color);
+            color: var(--text-main);
+        }
+
+        .contact-list {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .contact-item {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+        }
+
+        .contact-item span {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 0.85rem;
+            margin-top: 40px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <header>
+        <span class="profile-title">Pickleball Coach Profile</span>
+        <h1>阿吉教練 (Alex)</h1>
+        <p class="subtitle">入門/初級匹克球專業教學 · 進階實戰技術指導</p>
+        <div class="location-badge">
+            📍 主要授課地區：台中市北屯區、北區（可預約特約球館）
+        </div>
+    </header>
+
+    <!-- 網球底子與經驗優勢 -->
+    <section>
+        <h2>🎾 關於阿吉教練</h2>
+        <p style="color: var(--text-sub); margin-bottom: 16px;">
+            擁有超過 <strong>15 年網球球齡</strong> 的扎實底子，轉戰匹克球領域已有 3 年以上的實戰經驗與 1 年以上的專業教學資歷。結合網球的發力與截擊觀念，專注於協助學員建立正確觀念、高效動作矯正與實戰戰術應用。
+        </p>
+        <div class="grid-2">
+            <div class="info-box">
+                <h3>網球歷練 15+ 年</h3>
+                <p>具備優異的球感、腳步觀念與空間戰術意識。</p>
+            </div>
+            <div class="info-box">
+                <h3>匹克球資歷 3+ 年</h3>
+                <p>深耕匹克球規則、網前戰術與實戰技術。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 專業認證與戰績 -->
+    <section>
+        <h2>🏆 專業認證 & 賽事獲獎</h2>
+        <div class="grid-2">
+            <div>
+                <h3 style="margin-bottom: 12px; color: var(--text-main);">官方專業證照</h3>
+                <ul>
+                    <li>中華民國匹克球協會 2026 年丙級教練證</li>
+                    <li>中華民國匹克球協會 2025 年丙級裁判證</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 12px; color: var(--text-main);">榮譽戰績</h3>
+                <ul>
+                    <li>2026 苗栗縣長盃 團體組 3.0 季軍</li>
+                    <li>2025 台灣盃 男雙 3.0 季軍</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教學特色與招收對象 -->
+    <section>
+        <h2>💡 教學特色 & 招收對象</h2>
+        <div style="margin-bottom: 20px;">
+            <h3 style="margin-bottom: 10px; font-size: 1rem;">核心教學特色</h3>
+            <div class="tag-group">
+                <span class="tag">🚀 零基礎快速上手</span>
+                <span class="tag">📊 競態戰術分析</span>
+                <span class="tag">⚙️ 擊球動作矯正</span>
+                <span class="tag">🧠 競賽心態調整</span>
+            </div>
+        </div>
+        <div>
+            <h3 style="margin-bottom: 10px; font-size: 1rem;">招收對象</h3>
+            <div class="tag-group">
+                <span class="tag">新手初學</span>
+                <span class="tag">進階球友</span>
+                <span class="tag">兒童 / 青少年</span>
+                <span class="tag">樂齡族群</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 課程方案 -->
+    <section>
+        <h2>🏸 課程方案</h2>
+        <p style="color: var(--text-sub); margin-bottom: 16px;">多元化課程規劃，滿足不同學習需求（課程價格歡迎面議諮詢）：</p>
+        <div class="grid-2">
+            <div class="info-box">
+                <h3>個人一對一精細指導</h3>
+                <p>針對個人擊球盲點與動作進行精準矯正與動作塑造。</p>
+            </div>
+            <div class="info-box">
+                <h3>雙人組合搭檔專班</h3>
+                <p>著重跑位默契、雙打戰術演練與實戰應變能力。</p>
+            </div>
+            <div class="info-box">
+                <h3>團體包班 / 企業歡樂體驗</h3>
+                <p>適合好友聚會或企業社團，輕鬆體驗匹克球樂趣。</p>
+            </div>
+            <div class="info-box">
+                <h3>體驗試上課程</h3>
+                <p>專為零基礎新手設計，一堂課快速掌握基本規則與擊球。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡方式 -->
+    <section class="contact-container">
+        <h2>📩 立即預約課程 / 諮詢</h2>
+        <p style="color: var(--text-sub); margin-bottom: 20px;">無論是想從零開始學習，或是需要實戰技術瓶頸突破，歡迎直接與我聯繫！</p>
+        
+        <div class="contact-list">
+            <div class="contact-item">Line ID: <span>abelian1982</span></div>
+            <div class="contact-item">電話: <span>0918-839-126</span></div>
+            <div class="contact-item">Email: <span>abelian1982@gmail.com</span></div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <a href="https://line.me/ti/p/~abelian1982" target="_blank" class="btn">加 Line 預約諮詢</a>
+            <a href="mailto:abelian1982@gmail.com" class="btn btn-outline">寄送 Email</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 阿吉教練 Alex Pickleball Coaching. All Rights Reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>
